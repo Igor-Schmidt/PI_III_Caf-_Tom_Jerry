@@ -1,0 +1,171 @@
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x:hidden;
+}
+
+body {
+    background-color: #FFF7E0;
+    padding:10px;
+ 
+}
+
+
+
+@font-face {
+	font-family: quicksand;
+	src: url(fontes/Quicksand-VariableFont_wght.ttf);
+}
+
+#menu {
+	background-color: #B6E3E9;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+#menu li {
+	display: inline;
+}
+
+.redes img {	
+	width: 19px;
+	height: 19px;
+	padding-right: 10px;
+}
+
+.opcoes {
+	position: relative;
+	float: right;
+	padding-right: 80px;
+	text-decoration: none;
+	color: black;
+	font-family: quicksand;
+}
+
+.opcoes li {
+	text-align: center;
+}
+
+
+#logo {
+	background-color: #B6E3E9;
+	height: 251.31px;
+	top: 165px;
+	text-align: center;
+	z-index:-1;
+	margin: 0 auto;
+	width: 50%;
+}
+
+#menuzinho {
+	top: 499px;
+	font-family: quicksand;
+	color: #0E464E;
+	z-index:-1;
+	margin: 0 auto;
+	width: 50%;
+	text-align: center;
+}
+
+#menuzinho a {
+	text-decoration: none;
+	color: #0E464E;
+	font-size: 20px;
+}
+
+.opcoesmenu {
+	display: inline;
+	background-color: #B6E3E9;
+	margin-right: 50px;
+
+}
+
+#listras {background: linear-gradient(
+  	to bottom,
+  	#D9F1F1,
+  	#D9F1F1 50%,
+  	#FFF7E0 50%,
+  	#FFF7E0
+	);
+	background-size: 100% 140px;
+
+}
+
+#cardapios {
+	top: 742px;
+	z-index:-1;
+}
+
+.box {
+	display: inline-block;
+	margin: 50px;
+	background-color: #D9F1F1;
+}
+
+.box img {
+	width: 332px;
+	height: 389px;
+	border: 4px solid #D9F1F1
+}
+
+/*#restaurante img {
+	width: 100%;
+	position: static;
+	background-color: #D9F1F1;
+} */
+
+hr {
+	width: 60%;
+	align-items: center;
+}
+footer {
+    color: black;
+  	font-size:15px;
+  	width: 100%;
+  	font-family: quicksand;
+  	height: 50px;
+  	bottom: 0;
+
+}
+#rodape {
+	height: 40%;
+	bottom: 0;
+
+}
+.imagensrodape {
+	display: inline-block;
+	text-align: center;
+}
+
+#tom {
+	float: right; 
+	padding-bottom: -5%;
+}
+
+#conteudo {
+	width: 30%;
+	flex-direction: column;
+  	justify-content: center;
+  	text-align: center;
+}
+
+#jerry {
+	float: left; 
+}
+
+#tom img {
+	width: 340px;
+	height: 142px;
+}
+
+#jerry img {
+	width: 120px;
+	height: 96px;
+	padding-right: 220px;
+	padding-left: 130px;
+}
