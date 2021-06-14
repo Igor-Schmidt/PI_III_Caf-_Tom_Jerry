@@ -10,6 +10,7 @@ body
     margin: 0px;
     overflow-x:hidden;
     background-color: #FFF7E0;
+    font-family: quicksand;
 }
 
 .redes img{
@@ -30,68 +31,50 @@ body
     flex-direction: row;
     justify-content: center;
     align-items: center;
-	position: absolute;
-	width: 50%;
-	height:30%;
-	background: #D9F1F1;
-	top:15%;
-	left:26.5%;
+    width: 60%;
+    height: 16em;
+    background: #D9F1F1;
+    margin: 8% auto;
+    margin-bottom: 0;
 }
 #imglogo img{
 	width: 100%;
 	height:100%;
 
 }
-
 #menuzinho {
-	top: 499px;
-	font-family: quicksand;
-	color: #0E464E;
-	z-index:-1;
-	margin: 0 auto;
-	width: 50%;
+	margin: 5% auto;
+	width: 60%;
 	text-align: center;
+	margin-bottom: 10%;
 }
 
 #menuzinho a {
 	text-decoration: none;
 	color: #0E464E;
-	font-size: 20px;
-}
-
-.opcoesmenu {
-	display: inline;
+	font-size: 150%;
 	background-color: #B6E3E9;
-	margin-right: 50px;
-
+	margin-right: 10%;
+	padding: 0.5%;
 }
 
-#listras {background: linear-gradient(
-  	to bottom,
-  	#D9F1F1,
-  	#D9F1F1 50%,
-  	#FFF7E0 50%,
-  	#FFF7E0
-	);
-	background-size: 100% 140px;
-
+#listras {background: linear-gradient(to bottom,
+  	#D9F1F1,#D9F1F1 50%,
+  	#FFF7E0 50%,#FFF7E0);
+	background-size: 100% 30%;
 }
-
-#cardapios {
-	top: 742px;
+/*#cardapios {
 	z-index:-1;
-}
+}*/
 
 .box {
-	display: inline-block;
-	margin: 50px;
-	background-color: #D9F1F1;
+	text-align: center;
 }
 
 .box img {
-	width: 332px;
-	height: 389px;
-	border: 4px solid #D9F1F1
+	width: 20%;
+    border: 0.5em solid #D9F1F1;
+    margin: 5%;
 }
 
 /*#restaurante img {
@@ -103,15 +86,12 @@ body
 hr {
 	width: 60%;
 	align-items: center;
+	font-size: 100px;
 }
 footer {
-    color: black;
-  	font-size:15px;
-  	width: 100%;
+  	font-size: 100%;
   	font-family: quicksand;
-  	height: 50px;
-  	bottom: 0;
-
+  	text-align: center;
 }
 #rodape {
 	height: 40%;
@@ -128,7 +108,7 @@ footer {
 	padding-bottom: -5%;
 }
 
-#conteudo {
+.conteudo {
 	width: 30%;
 	flex-direction: column;
   	justify-content: center;
