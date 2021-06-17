@@ -61,72 +61,45 @@ body
 #listras {background: linear-gradient(to bottom,
   	#D9F1F1,#D9F1F1 50%,
   	#FFF7E0 50%,#FFF7E0);
-	background-size: 100% 30%;
+	background-size: 100% 29%;
 }
-/*#cardapios {
-	z-index:-1;
-}*/
 
-.box {
+.boxcardapios {
 	text-align: center;
 }
 
-.box img {
-	width: 20%;
+.boxcardapios img {
+	width: 23%;
     border: 0.5em solid #D9F1F1;
     margin: 5%;
 }
 
-/*#restaurante img {
-	width: 100%;
-	position: static;
-	background-color: #D9F1F1;
-} */
+.boximagens{
+	display: flex;
+    margin: 5% auto;
+    justify-content: center;
+    align-items: center;
+}
+.boximagens img{
+	width: 50%;
+}
 
 hr {
 	width: 60%;
 	align-items: center;
 	font-size: 100px;
 }
-footer {
-  	font-size: 100%;
-  	font-family: quicksand;
-  	text-align: center;
-}
-#rodape {
-	height: 40%;
-	bottom: 0;
 
-}
-.imagensrodape {
-	display: inline-block;
-	text-align: center;
-}
+.rodape{
+	padding: 15px;
+    display: flex;
+    height: 15em;
+    align-items: center;
+    justify-content: center;
+    background-color: #B6E3E9;
+    font-family: quicksand;
+    text-decoration: none;
+    line-height: 100%;
+    text-align: center;
 
-#tom {
-	float: right; 
-	padding-bottom: -5%;
-}
-
-.conteudo {
-	width: 30%;
-	flex-direction: column;
-  	justify-content: center;
-  	text-align: center;
-}
-
-#jerry {
-	float: left; 
-}
-
-#tom img {
-	width: 340px;
-	height: 142px;
-}
-
-#jerry img {
-	width: 120px;
-	height: 96px;
-	padding-right: 220px;
-	padding-left: 130px;
 }
