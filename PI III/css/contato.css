@@ -1,0 +1,108 @@
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x:hidden;
+}
+
+body {
+    background-color: #FFF7E0;
+    padding:10px;
+ 
+}
+
+@font-face {
+	font-family: quicksand;
+	src: url(fontes/Quicksand-VariableFont_wght.ttf);
+}
+
+#menu {
+	background-color: #B6E3E9;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+#menu li {
+	display: inline;
+}
+
+.redes img {	
+	width: 19px;
+	height: 19px;
+	padding-right: 10px;
+}
+
+.opcoes {
+	position: relative;
+	float: right;
+	padding-right: 80px;
+	text-decoration: none;
+	color: black;
+	font-family: quicksand;
+}
+
+.opcoes li {
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+hr {
+	width: 60%;
+	align-items: center;
+}
+footer {
+    color: black;
+  	font-size:15px;
+  	width: 100%;
+  	font-family: quicksand;
+  	height: 50px;
+  	bottom: 0;
+
+}
+#rodape {
+	height: 40%;
+	bottom: 0;
+
+}
+.imagensrodape {
+	display: inline-block;
+	text-align: center;
+}
+
+#tom {
+	float: right; 
+	padding-bottom: -5%;
+}
+
+#conteudo {
+	width: 30%;
+	flex-direction: column;
+  	justify-content: center;
+  	text-align: center;
+}
+
+#jerry {
+	float: left; 
+}
+
+#tom img {
+	width: 340px;
+	height: 142px;
+}
+
+#jerry img {
+	width: 120px;
+	height: 96px;
+	padding-right: 220px;
+	padding-left: 130px;
+}

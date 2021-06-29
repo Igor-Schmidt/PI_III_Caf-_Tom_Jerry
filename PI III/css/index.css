@@ -1,0 +1,106 @@
+@font-face {
+	font-family: quicksand;
+	src: url(../fontes/Quicksand-VariableFont_wght.ttf);
+}
+@font-face{
+	font-family: Chicle;
+	src: url(../fontes/Chicle-Regular.ttf);
+}
+
+body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    overflow-x:hidden;
+    background-color: #FFF7E0;
+    font-family: quicksand;
+}
+
+.redes img{
+	width:23px;
+	height:23px;
+}
+
+.opcoes {
+	padding-right: 80px;
+	padding-left: 80px;
+	text-decoration: none;
+	color: black;
+	font-family: quicksand;
+}
+
+#logo {
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 16em;
+    background: #D9F1F1;
+    margin: 8% auto;
+    margin-bottom: 0;
+}
+
+#imglogo img{
+	width: 100%;
+	height:100%;
+
+}
+
+#menuzinho {
+	margin: 5% auto;
+	width: 60%;
+	text-align: center;
+	margin-bottom: 10%;
+}
+
+#menuzinho a {
+	text-decoration: none;
+	color: #0E464E;
+	font-size: 150%;
+	background-color: #B6E3E9;
+	margin-right: 10%;
+	padding: 0.5%;
+}
+
+#listras {background: linear-gradient(to bottom,
+  	#D9F1F1,#D9F1F1 50%,
+  	#FFF7E0 50%,#FFF7E0);
+	background-size: 100% 29%;
+}
+
+.boxcardapios {
+	text-align: center;
+}
+
+.boxcardapios img {
+	width: 23%;
+    border: 0.5em solid #D9F1F1;
+    margin: 5%;
+}
+
+.boximagens{
+	display: flex;
+    margin: 10% auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.boximagens img{
+	width: 50%;
+}
+
+.rodape{
+	font-size: 95%;
+	border-top: 1px solid black;
+	padding: 15px;
+    display: flex;
+    background-color: #B6E3E9;
+    font-family: quicksand;
+    text-decoration: none;
+    line-height: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
