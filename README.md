@@ -6,7 +6,7 @@ O projeto consiste em um sistema para uma cafeteria temática, onde tanto os cli
 quanto os funcionários poderão utilizar.
 Estão sendo usadas as linguagens HTML, CSS e Bootstrap até o atual momento.
 
-As páginas feitas até o momento são:
+As páginas feitas até agora são:
 - Home: contendo as opções para direcionar às páginas de "cardápio", "contato", "endereço" e "nós";
 - Sobre: contendo um breve texto sobre a hipotética cafeteria (sem estilização até agora);
 - Cardápios: três páginas separadas em "sobremesas", "salgados" e "bebidas", servindo meramente como
@@ -18,4 +18,5 @@ cliente e funcionário, ainda está em processo de desenvolvimento)
 *Alterações realizadas desde a última avaliação*
 
 - Estilização completa da página de login;
-- 
+- Estilização do formulário para login (placeholder, mensagem de erro "preencha este campo")
+- Estilização das páginas de cardápio;
