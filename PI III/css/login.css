@@ -1,3 +1,18 @@
+.dados{
+	margin-top: 1%;
+	margin-bottom: 1%;
+	padding-left: 2%;
+	width: 75%;
+	height: 3.5em;
+	border-radius: 2em;
+	background: #FFF7E0;
+	border:solid #FFF7E0;
+}
+.label{
+	font-size: 150%;
+	margin-right: 60%;
+}
+
 .fieldsetclientes{
 	width: 50%;
 	margin-left: 3%;
@@ -8,35 +23,27 @@
     border-radius: 3em; 
 	text-align: center;
 }
-
 .legendclientes{
+	padding-top: 2%;
 	font-family: Chicle;	
 	font-size: 300%;
 	color: #C7CCE9;
 	text-shadow: 2px 2px 0 black, 0px 2px 0 black, 2px 0px 0 black;
 }
-
-.dados{
-	margin-top: 1%;
-	margin-bottom: 1%;
-	padding-left: 2%;
-	width: 75%;
-	height: 3em;
-	border-radius: 2em;
-	background: #FFE8E0;
-	border:solid #FFE8E0;
-}
-.label{
-	font-size: 150%;
-	margin-right: 60%;
-}
-
-.botoes{
-	border-radius: 1em;
-	border:solid #B6E3E9;
-	background-color: #B6E3E9;
+.botoesclientes{
+	font-size: 17px;
+	color: #3E1C03;
+	font-weight: bold;
+	border-radius: 0.8em;
+	box-sizing: border-box;
+	border: 1px solid #FFFAED;
+	box-shadow: 2.5px 4.5px 0px #ff8d94;
+	background-color: #FFAEB3;
 	margin-top: 1em;
 	margin-bottom: 1em;
+	padding: 0.5em 1em;
+	margin-left: 1em;
+	margin-right: 1em;
 }
 
 .fieldsetfuncionarios{
@@ -49,10 +56,42 @@
     border-radius: 3em; 
 	text-align: center;
 }
-
 .legendfuncionarios{
+	padding-top: 2%;
 	font-family: Chicle;	
 	font-size: 300%;
 	color: #FFC5C8;
 	text-shadow: 2px 2px 0 black, 0px 2px 0 black, 2px 0px 0 black;
+}
+.botoesfuncionarios{
+	font-size: 17px;
+	color: #3E1C03;
+	font-weight: bold;
+	border-radius: 0.8em;
+	box-sizing: border-box;
+	border: 1px solid #FFFAED;
+	box-shadow: 2.5px 4.5px 0px #9692CA;
+	background-color: #C5C1ED;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding: 0.5em 1em;
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+::placeholder{
+  color: #342C27;
+  font-weight: bold;
+  font-size: 100%;
+  opacity: 0.9;
+}
+button:hover{
+	color: white;
+}
+input{
+	color: #342C27;
+	font-weight: bold;
+}
+input:focus {
+  outline: none;
 }

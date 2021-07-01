@@ -6,6 +6,10 @@
 	font-family: Chicle;
 	src: url(../fontes/Chicle-Regular.ttf);
 }
+@font-face{
+	font-family: Neuton;
+	src:url(../fontes/Neuton-Regular.ttf);
+}
 
 body
 {
@@ -36,9 +40,9 @@ body
     justify-content: center;
     align-items: center;
     width: 60%;
-    height: 16em;
+    height: 20em;
     background: #D9F1F1;
-    margin: 8% auto;
+    margin: 5% auto;
     margin-bottom: 0;
 }
 
@@ -50,18 +54,18 @@ body
 
 #menuzinho {
 	margin: 5% auto;
-	width: 60%;
 	text-align: center;
 	margin-bottom: 10%;
 }
 
 #menuzinho a {
+	font-family: Neuton;
 	text-decoration: none;
 	color: #0E464E;
 	font-size: 150%;
 	background-color: #B6E3E9;
 	margin-right: 10%;
-	padding: 0.5%;
+	padding: 0.2% 3%;
 }
 
 #listras {background: linear-gradient(to bottom,
