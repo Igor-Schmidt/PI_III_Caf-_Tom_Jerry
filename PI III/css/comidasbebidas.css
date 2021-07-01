@@ -1,0 +1,26 @@
+.boxbanner{
+	background-color: #B3DFEC;
+	display: flex;
+	height: 25vw;
+}
+.boxbanner h1{
+	margin-left: 5%;
+	margin-top: 3%;
+	font-family: Chicle;
+	color: #FFC5C8;
+	text-shadow: 3px 3px 0 black, 0px 2px 0 black, 2px 0px 0 black;
+	font-size: 6vw;
+}
+
+.produtos{
+	margin: 5% 3% 2% 3%;
+	border-radius: 20px;
+	font-family: Neuton;
+}
+.produtos img{
+	width: 20vh;
+	height: auto;
+	max-height: 200px;
+	max-width: 200px;
+	margin: 2% 2%;
+}

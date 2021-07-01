@@ -24,9 +24,8 @@
 	text-align: center;
 }
 .legendclientes{
-	padding-top: 2%;
 	font-family: Chicle;	
-	font-size: 300%;
+	font-size: 5vw;
 	color: #C7CCE9;
 	text-shadow: 2px 2px 0 black, 0px 2px 0 black, 2px 0px 0 black;
 }
@@ -57,9 +56,8 @@
 	text-align: center;
 }
 .legendfuncionarios{
-	padding-top: 2%;
 	font-family: Chicle;	
-	font-size: 300%;
+	font-size: 5vw;
 	color: #FFC5C8;
 	text-shadow: 2px 2px 0 black, 0px 2px 0 black, 2px 0px 0 black;
 }
