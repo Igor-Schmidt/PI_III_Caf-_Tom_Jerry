@@ -18,9 +18,16 @@
 	font-family: Neuton;
 }
 .produtos img{
-	width: 20vh;
-	height: auto;
+	width: 23vh;
+	height: 23vh;
 	max-height: 200px;
-	max-width: 200px;
 	margin: 2% 2%;
+}
+
+a.linktenda{
+	display: block;
+	height: 100%;
+	width: 100%;
+	text-decoration: none;
+	color: #212529;
 }
