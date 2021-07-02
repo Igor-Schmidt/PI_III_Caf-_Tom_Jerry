@@ -3,7 +3,7 @@ Alunos: Camila Eloísa, Igor e Letice
 Turma: 302 informática
 
 O projeto consiste em um sistema para uma cafeteria temática, onde tanto os clientes 
-quanto os funcionários poderão utilizar.
+quanto os funcionários poderão utilizar a mesma plataforma.
 Estão sendo usadas as linguagens HTML, CSS e Bootstrap até o atual momento.
 
 As páginas feitas até agora são:
@@ -12,10 +12,10 @@ As páginas feitas até agora são:
 - Cardápios: três páginas separadas em "sobremesas", "salgados" e "bebidas", servindo meramente como
 uma lista para visualizar as opções disponíveis;
 - Login: área aonde o cliente poderá acessar para realizar seus pedidos de forma virtual e aonde o 
-funcionário poderá ter acesso aos pedidos e ao cardápio, podendo gerenciá-lo (área de gerenciamento de ambos,
-cliente e funcionário, ainda está em processo de desenvolvimento)
+funcionário poderá ter acesso aos pedidos e ao cardápio, podendo gerenciá-los (CRUD) OBS: área de gerenciamento de ambos,
+cliente e funcionário, ainda está em processo de desenvolvimento
 
-*Alterações realizadas desde a última avaliação*
+*Alterações realizadas desde a última avaliação:*
 
 - Estilização completa da página de login;
 - Estilização do formulário para login (placeholder, mensagem de erro "preencha este campo")
