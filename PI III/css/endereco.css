@@ -1,0 +1,9 @@
+
+.map_endereco iframe{
+	margin: 4% auto;
+	display: block;
+    width: 80%;
+    height: 80vh;
+    border: 3vh #A6DFBA solid;
+    border-radius: 5vh;
+}
