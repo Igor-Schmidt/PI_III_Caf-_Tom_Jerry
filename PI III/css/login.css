@@ -93,3 +93,18 @@ input{
 input:focus {
   outline: none;
 }
+
+.botoesfuncionarios a{
+	text-decoration: none;
+	color: #3E1C03;
+}
+.botoesclientes a{
+	text-decoration: none;
+	color: #3E1C03;
+}
+.botoesfuncionarios a:hover{
+	color: white;
+}
+.botoesclientes a:hover{
+	color: white;
+}

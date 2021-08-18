@@ -1,0 +1,74 @@
+fieldset{
+	font-size: 2.5vh;
+	margin:3% auto;
+	width: 70%;
+    background-color: #FFC5C8;
+    border-radius: 3em; 
+	text-align: center;
+	padding: 1.5% 0%;
+	line-height: 1.8em;
+	border: 3px #ff8d94 solid;
+}
+
+.cadastro_dados input{
+	color: #342C27;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 1%;
+	width: 35%;
+	height: 2.6em;
+	font-size: 1.8vh;
+	border: 1px solid #FFFAED;
+    box-shadow: 2.5px 4.5px 0px #ff8d94;
+    border-radius: 3em;
+}
+
+.cadastro_dados h1{
+	font-family: Chicle;
+    color: #C7CCE9;
+    text-shadow: 2px 2px 0 black, 0px 2px 0 black, 2px 0px 0 black;
+    font-size: 3em;
+}
+
+.cadastro_dados input:hover{
+	transition-duration: 0.1s;
+	width: 40%;
+	height: 2.8em;
+}
+
+.cadastro_dados button{
+	font-size: 2vh;
+    color: #3E1C03;
+    font-weight: bold;
+    border-radius: 0.8em;
+    box-sizing: border-box;
+    border: 1px solid #FFFAED;
+    box-shadow: 2.5px 4.5px 0px #ff8d94;
+    background-color: #FFAEB3;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 0.3em 1.8em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+input:focus {
+  outline: none;
+}
+.cadastro_dados a{
+	text-decoration: none;
+	color: #3E1C03;
+}
+.cadastro_dados button:hover{
+	color:white;
+}
+.cadastro_dados a:hover{
+	color:white;
+}
+
+::placeholder{
+  color: #342C27;
+  font-weight: bold;
+  font-size: 100%;
+  opacity: 0.9;
+}
