@@ -1,7 +1,7 @@
 from config import *
 
 class Cliente(db.Model):
-    # atributos da tabela cliente
+    # atributos do cliente
     id = db.Column(db.Integer, primary_key=True)
     nome = db.Column(db.String(30))
     idade = db.Column(db.Integer())
@@ -29,7 +29,7 @@ class Cliente(db.Model):
         }
 
 class Funcionario(db.Model):
-    # atributos da tabela funcionario
+    # atributos do funcionario
     id = db.Column(db.Integer, primary_key=True)
     nome = db.Column(db.String(30))
     idade = db.Column(db.Integer())
