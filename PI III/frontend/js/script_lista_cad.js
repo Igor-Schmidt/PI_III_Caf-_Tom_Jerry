@@ -71,10 +71,56 @@ $( document ).ready(function(){
             $("#corpoTabelaFuncionarios").html(linhas);
         }
     });
+
+    // código para mapear click do botão cadastrar no site cadastrar_cliente
+    $(document).on("click", "#btn_cadastrar_cliente", function() {
+        //pegar dados do formulário
+        nome_c = $("#nome_c").val();
+        idade_c = $("#idade_c").val();
+        login_c = $("#login_c").val();
+        senha_c = $("#senha_c").val();
+        email_c = $("#email_c").val();
+        telefone_c = $("#telefone_c").val();
+        endereco_c = $("#endereco_c").val();
+        // preparar dados no formato json
+        var dados_c = JSON.stringify({nome : nome_c, idade : idade_c, login : login_c,
+            senha : senha_c, email : email_c, telefone : telefone_c, endereco : endereco_c});
+        // fazer requisição para o back-end
+        $.ajax({
+            url: 'http://localhost:5000/cadastrar_cliente',
+            type: 'POST',
+            dataType: 'json', // os dados são recebidos no formato json
+            contentType: 'application/json', // tipo dos dados enviados
+            data: dados_c, // estes são os dados enviados
+            success: clienteCadastrado,
+            error: erroCadastroCliente
+        });
+        function clienteCadastrado (retorno) {
+            if (retorno.resultado == "ok") {
+                // informar resultado de sucesso
+                alert("Cliente cadastrado com sucesso!");
+                $("#nome_c").val("");
+                $("#idade_c").val("");
+                $("#login_c").val("");
+                $("#senha_c").val("");
+                $("#email_c").val("");
+                $("#telefone_c").val("");
+                $("#dendereco_c").val("");
+            } 
+            else {
+                // informar mensagem de erro
+                alert(retorno.resultado + ":" + retorno.detalhes);
+            }            
+        }
+        function erroCadastroCliente (retorno) {
+            // informar mensagem de erro
+            alert("Erro: " + retorno.resultado + ":");
+        }
+    });
     
-    // código para mapear click do botão incluir pessoa
+    // código para mapear click do botão cadastrar no site cadastrar_funcionario
     $(document).on("click", "#btn_cadastrar_funcionario", function() {
-        //pegar dados da tela
+        //pegar dados do formulário
         nome_f = $("#nome_f").val();
         idade_f = $("#idade_f").val();
         login_f = $("#login_f").val();
@@ -84,7 +130,6 @@ $( document ).ready(function(){
         // preparar dados no formato json
         var dados_f = JSON.stringify({nome : nome_f, idade : idade_f, login : login_f,
             senha : senha_f, email : email_f, telefone : telefone_f});
-        alert(dados_f)
         // fazer requisição para o back-end
         $.ajax({
             url: 'http://localhost:5000/cadastrar_funcionario',
@@ -92,13 +137,19 @@ $( document ).ready(function(){
             dataType: 'json', // os dados são recebidos no formato json
             contentType: 'application/json', // tipo dos dados enviados
             data: dados_f, // estes são os dados enviados
-            success: funcionarioCadastrado, // chama a função listar para processar o resultado
+            success: funcionarioCadastrado,
             error: erroCadastroFuncionario
         });
         function funcionarioCadastrado (retorno) {
-            if (retorno.resultado == "ok") { // a operação deu certo?
+            if (retorno.resultado == "ok") {
                 // informar resultado de sucesso
                 alert("Funcionário cadastrado com sucesso!");
+                $("#nome_f").val("");
+                $("#idade_f").val("");
+                $("#login_f").val("");
+                $("#senha_f").val("");
+                $("#email_f").val("");
+                $("#telefone_f").val("");
             } 
             else {
                 // informar mensagem de erro

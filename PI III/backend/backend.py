@@ -33,15 +33,31 @@ def listar_funcionarios():
     listar_funcionarios.headers.add("Access-Control-Allow-Origin", "*")
     return listar_funcionarios
 
-# teste da rota: curl -d '{"nome":"test111", "idade":"99", "login":"testLogin", "senha":"testSenha", "email":"testEmail@gmail.com", "telefone":"92212-1212","endereco":"Casa Rosa número 99"}' -X POST -H "Content-Type:application/json" http://localhost:5000/cadastrar_cliente
+@app.route("/cadastrar_cliente", methods=['post'])
+def cadastrar_cliente():
+    # preparar uma resposta para a ação
+    resposta = jsonify({"resultado": "ok", "detalhes": "ok"})
+    # receber as informações do novo cliente
+    dados_c = request.get_json() #(force=True) dispensa Content-Type na requisição
+    try: # tentar executar a operação
+      nova_c = Cliente(**dados_c) # criar o novo cliente
+      db.session.add(nova_c) # adicionar no BD
+      db.session.commit() # efetivar a operação de gravação
+    except Exception as e: # em caso de erro...
+      # informar mensagem de erro
+      resposta = jsonify({"resultado":"erro", "detalhes":str(e)})
+    # adicionar cabeçalho de liberação de origem
+    resposta.headers.add("Access-Control-Allow-Origin", "*")
+    return resposta # responder!
+
 @app.route("/cadastrar_funcionario", methods=['post'])
 def cadastrar_funcionario():
     # preparar uma resposta para a ação
     resposta = jsonify({"resultado": "ok", "detalhes": "ok"})
-    # receber as informações da nova pessoa
+    # receber as informações do novo funcionário
     dados_f = request.get_json() #(force=True) dispensa Content-Type na requisição
     try: # tentar executar a operação
-      nova_f = Funcionario(**dados_f) # criar o nvo cliente
+      nova_f = Funcionario(**dados_f) # criar o novo funcionário
       db.session.add(nova_f) # adicionar no BD
       db.session.commit() # efetivar a operação de gravação
     except Exception as e: # em caso de erro...
