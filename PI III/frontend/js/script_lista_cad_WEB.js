@@ -1,9 +1,10 @@
 $( document ).ready(function(){
 
+    var urlweb = 'https://igorschmidt.pythonanywhere.com/'
     $("#link_listar_clientes").click(function(){
         
         $.ajax({
-            url: 'http://localhost:5000/listar_clientes',
+            url: urlweb + '/listar_clientes',
             method: 'GET',
             dataType: 'json', // os dados são recebidos no formato json
             success: listar_clientes, // chama a função listar_clientes
@@ -21,11 +22,11 @@ $( document ).ready(function(){
               lin = "<tr>" + 
               "<td>" + clientes[c].nome + "</td>" + 
               "<td>" + clientes[c].idade + "</td>" + 
-              "<td>" + clientes[c].login + "</td>" +
+              "<td>" + clientes[c].login + "</td>" + 
+              "<td>" + clientes[c].senha + "</td>" +
               "<td>" + clientes[c].email + "</td>" + 
               "<td>" + clientes[c].telefone + "</td>" + 
               "<td>" + clientes[c].endereco + "</td>" +
-              '<td>' + '<button id="excluir_' + clientes[c].id + '"class="botao_excluir_cliente"></button>' + '</td>'
               "</tr>";
 
               // adicionar a linha da tabela em um acumulador
@@ -40,7 +41,7 @@ $( document ).ready(function(){
     $("#link_listar_funcionarios").click(function(){
         
         $.ajax({
-            url: 'http://localhost:5000/listar_funcionarios',
+            url: urlweb + '/listar_funcionarios',
             method: 'GET',
             dataType: 'json', // os dados são recebidos no formato json
             success: listar_funcionarios, // chama a função listar_funcionarios
@@ -58,10 +59,10 @@ $( document ).ready(function(){
               lin = "<tr>" + 
               "<td>" + funcionarios[f].nome + "</td>" + 
               "<td>" + funcionarios[f].idade + "</td>" + 
-              "<td>" + funcionarios[f].login + "</td>" +
+              "<td>" + funcionarios[f].login + "</td>" + 
+              "<td>" + funcionarios[f].senha + "</td>" +
               "<td>" + funcionarios[f].email + "</td>" + 
-              "<td>" + funcionarios[f].telefone + "</td>" +
-              '<td>' + '<button id="excluir_' + funcionarios[f].id + '"class="botao_excluir_funcionario"></button>' + '</td>'
+              "<td>" + funcionarios[f].telefone + "</td>" + 
               "</tr>";
 
               // adicionar a linha da tabela em um acumulador
@@ -87,7 +88,7 @@ $( document ).ready(function(){
             senha : senha_c, email : email_c, telefone : telefone_c, endereco : endereco_c});
         // fazer requisição para o back-end
         $.ajax({
-            url: 'http://localhost:5000/cadastrar_cliente',
+            url: urlweb + '/cadastrar_cliente',
             type: 'POST',
             dataType: 'json', // os dados são recebidos no formato json
             contentType: 'application/json', // tipo dos dados enviados
@@ -105,7 +106,7 @@ $( document ).ready(function(){
                 $("#senha_c").val("");
                 $("#email_c").val("");
                 $("#telefone_c").val("");
-                $("#endereco_c").val("");
+                $("#dendereco_c").val("");
             } 
             else {
                 // informar mensagem de erro
@@ -132,7 +133,7 @@ $( document ).ready(function(){
             senha : senha_f, email : email_f, telefone : telefone_f});
         // fazer requisição para o back-end
         $.ajax({
-            url: 'http://localhost:5000/cadastrar_funcionario',
+            url: urlweb + '/cadastrar_funcionario',
             type: 'POST',
             dataType: 'json', // os dados são recebidos no formato json
             contentType: 'application/json', // tipo dos dados enviados
@@ -159,96 +160,6 @@ $( document ).ready(function(){
         function erroCadastroFuncionario (retorno) {
             // informar mensagem de erro
             alert("Erro: " + retorno.resultado + ":");
-        }
-    });
-
-    $(document).on("click", ".botao_excluir_cliente", function(){
-        var id_botao = $(this).attr('id'); // var guarda o id do botão excluir
-        var nome_descartavel = "excluir_"; // var guarda nome de comparação
-        var id_cliente = id_botao.substring(nome_descartavel.length); //var guarda o valor depois do nome de comparação
-
-        $.ajax({
-            url: 'http:/localhost:5000/excluir_cliente/' + id_cliente,//chmando rota
-            type: 'DELETE', //método delete
-            dataType: 'json', //dados em formato json
-            success: clienteExcluido, //caso de certo executar tal função
-            error: erroClieNaoExcluido //caso de erro executar tal função
-        });
-        function clienteExcluido(retorno){
-            if (retorno.resultado == "ok") {
-                // caso 'ok' remover linha do cliente excluido, atualizar página
-                alert("Cliente excluído com sucesso!")
-                location.reload();
-            }
-            else{
-                alert(retorno.resultado + ":" + retorno.detalhes);
-            }
-        }
-        function erroClieNaoExcluido (){
-            //informa que houve algum erro
-            alert("Erro ao executar essa operação, verifique o backend.")
-        }
-    });
-
-    $(document).on("click", ".botao_excluir_funcionario", function(){
-        var id_botao = $(this).attr('id'); // var guarda o id do botão excluir
-        var nome_descartavel = "excluir_"; // var guarda nome de comparação
-        var id_funcionario = id_botao.substring(nome_descartavel.length); //var guarda o valor depois do nome de comparação
-
-        $.ajax({
-            url: 'http:/localhost:5000/excluir_funcionario/' + id_funcionario,//chmando rota
-            type: 'DELETE', //método delete
-            dataType: 'json', //dados em formato json
-            success: funcionarioExcluido, //caso de certo executar tal função
-            error: erroFuncNaoExcluido //caso de erro executar tal função
-        });
-        function funcionarioExcluido(retorno){
-            if (retorno.resultado == "ok") {
-                // caso 'ok' remover linha do funcionario excluido, atualizar página
-                alert("Funcionário excluído com sucesso!")
-                location.reload();
-            }
-            else{
-                alert(retorno.resultado + ":" + retorno.detalhes);
-            }
-        }
-        function erroFuncNaoExcluido (){
-            //informa que houve algum erro
-            alert("Erro ao executar essa operação, verifique o backend.")
-        }
-    });
-
-    $(document).on("click", "#link_excluir_clientes", function(){
-        $.ajax({
-            url: 'http:/localhost:5000/excluir_todos_clientes',//chmando rota
-            type: 'DELETE', //método delete
-            dataType: 'json', //dados em formato json
-            success: ClientesExcluidos, //caso de certo executar tal função
-            error: ClientesNaoExcluidos //caso de erro executar tal função
-        });
-        function ClientesExcluidos(){
-            alert("Todos os Clientes foram excluídos do banco de dados!")
-            location.reload();
-        }
-        function ClientesNaoExcluidos(){
-            alert("Erro ao excluir os Clientes!")
-        }
-    });
-
-    $(document).on("click", "#link_excluir_funcionarios", function(){
-        $.ajax({
-            url: 'http:/localhost:5000/excluir_todos_funcionarios',//chmando rota
-            type: 'DELETE', //método delete
-            dataType: 'json', //dados em formato json
-            success: FuncionariosExcluidos, //caso de certo executar tal função
-            error: FuncionariosNaoExcluidos //caso de erro executar tal função
-        });
-        function FuncionariosExcluidos(){
-            alert("Todos os Funcionários foram excluídos do banco de dados!")
-            location.reload();
-        }
-        function FuncionariosNaoExcluidos(){
-            alert("Erro ao excluir os Funcionários!")
         }
     });
 });

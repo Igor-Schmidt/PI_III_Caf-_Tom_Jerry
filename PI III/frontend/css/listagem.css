@@ -1,0 +1,18 @@
+.botao_excluir_cliente {
+    background-color: transparent;
+    background-image: url(../imagens/excluir.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+}
+.botao_excluir_funcionario {
+    background-color: transparent;
+    background-image: url(../imagens/excluir.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+}

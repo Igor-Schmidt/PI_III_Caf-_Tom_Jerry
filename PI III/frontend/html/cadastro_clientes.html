@@ -13,7 +13,7 @@
     <title>Cadastro de Cliente</title>
   </head>
 
-  <body>
+  <body style="min-width: 500px;">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 
     <nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color:#B6E3E9">
@@ -47,7 +47,7 @@
           <input type="text" name="nome_cliente" maxlength="30" required="" placeholder="Insira seu nome" id="nome_c">
           <br>
 
-          <label for="idade_cliente">Idade:</label>
+          <label for="idade_cliente" maxlength="2">Idade:</label>
           <br>
           <input type="number" name="idade_cliente" min="18" max="100" required="" placeholder="Insira sua idade:" id="idade_c">
           <br>
@@ -74,7 +74,7 @@
 
           <label for="endereco_cliente">Informe um endereço para entrega:</label>
           <br>
-          <input type="text" name="endereco_cliente" required="" maxlength="200" placeholder="Ex. Casa azul, 123" id="endereco_c">
+          <input type="text" name="endereco_cliente" required="" maxlength="30" placeholder="Ex. Casa azul, 123" id="endereco_c">
           <br>
 
           <button type="button" id="btn_cadastrar_cliente">Cadastrar</button>
