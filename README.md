@@ -6,7 +6,7 @@ O projeto consiste em um sistema para uma cafeteria temática, onde tanto os cli
 quanto os funcionários poderão utilizar a mesma plataforma.
 Estão sendo usadas as linguagens HTML, CSS e Bootstrap até o atual momento.
 
-(ATUALIZADO NO DIA 20/08/2021)
+(ATUALIZADO EM 19/10/2021)
 
 As páginas feitas até agora são:
 - Home: contendo as opções para direcionar às páginas de "cardápio", "contato", "endereço" e "nós";
@@ -21,10 +21,8 @@ cliente e funcionário, ainda está em processo de desenvolvimento;
 - Seção (dentro de cada um dos cardápios) separada para vizualização dos itens do cardápio;
 - Cadastro: duas páginas contendo um formulário cada para a realização do cadastro de um novo usuário (cliente ou formulário)
 
-
 *Alterações realizadas desde a última avaliação:*
 
-- Criação e estilização das seções individuais dentro dos cardápios;
-- Criação de formulário para cadastro de cliente e funcionário;
-- Adição de textos nas páginas "cardápios", "sobre" e contato;
-- 
+- Backend;
+- Cadastro de clientes e funcionários (funcionando com seus recursos básicos);
+- Publicação do sistema no site pythonanywhere.com;
