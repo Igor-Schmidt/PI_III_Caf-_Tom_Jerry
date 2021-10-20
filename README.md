@@ -24,5 +24,7 @@ cliente e funcionário, ainda está em processo de desenvolvimento;
 *Alterações realizadas desde a última avaliação:*
 
 - Backend;
-- Cadastro de clientes e funcionários (funcionando com seus recursos básicos);
+- Cadastro de clientes e funcionários;
 - Publicação do sistema no site pythonanywhere.com;
+- Adaptação do código para garantir o funcionamento da exclusão de dados no sistema (no momento do envio da avaliação não estava
+funcionando corretamente no pythonanywhere)
