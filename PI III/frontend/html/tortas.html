@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../css/index.css"></link>
     <link rel="stylesheet" type="text/css" href="../css/tenda_sobremesas.css"></link>
+    <script src="../js/troca_sobremesas.js"></script>
 
     <title>Tortas</title>
   </head>
@@ -71,35 +72,35 @@
     <h1 id="logo_sobremesa">Tortas</h1>
     <button class="botao_voltar"><a href="sobremesas.html" style="text-decoration: none;color:#3E1C03">Voltar para as sobremesas</a></button>
 
-    <div style="display: flex; margin-bottom:8%">
+    <div style="display: flex; margin-bottom: 1%">
 
       <div class="retangulo_destaque">
-        <img src="../imagens/tortas.png" style="width: 80%; margin-top: 3%;">
+        <img src="../imagens/tortas.png" style="width: 70%; margin-top: 3%;" id="troca_torta">
       </div>
 
       <div class="retangulos_menores">
         <table>
 
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><img src="../imagens/torta_morango.png"onclick="tortaMorango()"></td>
+            <td><img src="../imagens/torta_choco_branco.png" onclick="tortaChocoBranco()"></td>
+            <td><img src="../imagens/torta_chocolate.png" onclick="tortaChocolate()"></td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><img src="../imagens/torta_maca.png" onclick="tortaMaca()"></td>
+            <td><img src="../imagens/torta_cereja.png"onclick="tortaCereja()"></td>
+            <td><img src="../imagens/torta_framboesa.png"onclick="tortaFramboesa()"></td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><img src="../imagens/torta_cereais.png" onclick="tortaCereais()"></td>
           </tr>
 
-        </table>  
+        </table> 
       </div>
-
+      
     </div>
+    
+    <button class="botao_adicionar" style="margin-left: 11%; margin-bottom: 5%;">Adicionar essa torta ao carrinho 👆</button>
 
       <footer>
         <div class="rodape" style="background-color: #FFC5C8">   

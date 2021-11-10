@@ -71,3 +71,8 @@
 	border: 0.6vw #D8AD7C solid;
 	border-radius: 2vw;
 }
+
+.paes_opcoes td:hover{
+	border: 0.6vw #624530 solid; 
+	background-color:#EDBB81;
+}

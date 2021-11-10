@@ -137,4 +137,5 @@ def excluir_todos_funcionarios():
   resposta.headers.add("Access-Control-Allow-Origin", "*")
   return resposta
 
+#Linha a baixo apenas para uso local
 app.run(debug = True)

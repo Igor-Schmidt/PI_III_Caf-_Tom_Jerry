@@ -1,10 +1,10 @@
 $( document ).ready(function(){
+    var urlWeb = 'https://igorschmidt.pythonanywhere.com/';
 
     $("#link_listar_clientes").click(function(){
-        var urlweb = 'https://igorschmidt.pythonanywhere.com/'
 
         $.ajax({
-            url: urlweb + '/listar_clientes',
+            url: urlWeb+'/listar_clientes',
             method: 'GET',
             dataType: 'json', // os dados são recebidos no formato json
             success: listar_clientes, // chama a função listar_clientes
@@ -41,7 +41,7 @@ $( document ).ready(function(){
     $("#link_listar_funcionarios").click(function(){
 
         $.ajax({
-            url: urlweb + '/listar_funcionarios',
+            url: urlWeb+'/listar_funcionarios',
             method: 'GET',
             dataType: 'json', // os dados são recebidos no formato json
             success: listar_funcionarios, // chama a função listar_funcionarios
@@ -88,7 +88,7 @@ $( document ).ready(function(){
             senha : senha_c, email : email_c, telefone : telefone_c, endereco : endereco_c});
         // fazer requisição para o back-end
         $.ajax({
-            url: urlweb + '/cadastrar_cliente',
+            url: urlWeb+'/cadastrar_cliente',
             type: 'POST',
             dataType: 'json', // os dados são recebidos no formato json
             contentType: 'application/json', // tipo dos dados enviados
@@ -133,7 +133,7 @@ $( document ).ready(function(){
             senha : senha_f, email : email_f, telefone : telefone_f});
         // fazer requisição para o back-end
         $.ajax({
-            url: urlweb + '/cadastrar_funcionario',
+            url: urlWeb+'/cadastrar_funcionario',
             type: 'POST',
             dataType: 'json', // os dados são recebidos no formato json
             contentType: 'application/json', // tipo dos dados enviados
@@ -169,7 +169,7 @@ $( document ).ready(function(){
         var id_cliente = id_botao.substring(nome_descartavel.length); //var guarda o valor depois do nome de comparação
 
         $.ajax({
-            url: urlweb + '/excluir_cliente/' + id_cliente,//chmando rota
+            url: urlWeb+'/excluir_cliente/' + id_cliente,//chmando rota
             type: 'DELETE', //método delete
             dataType: 'json', //dados em formato json
             success: clienteExcluido, //caso de certo executar tal função
@@ -197,7 +197,7 @@ $( document ).ready(function(){
         var id_funcionario = id_botao.substring(nome_descartavel.length); //var guarda o valor depois do nome de comparação
 
         $.ajax({
-            url: urlweb + '/excluir_funcionario/' + id_funcionario,//chmando rota
+            url: urlWeb+'/excluir_funcionario/' + id_funcionario,//chmando rota
             type: 'DELETE', //método delete
             dataType: 'json', //dados em formato json
             success: funcionarioExcluido, //caso de certo executar tal função
@@ -221,7 +221,7 @@ $( document ).ready(function(){
 
     $(document).on("click", "#link_excluir_clientes", function(){
         $.ajax({
-            url: urlweb + '/excluir_todos_clientes',//chmando rota
+            url: urlWeb+'/excluir_todos_clientes',//chmando rota
             type: 'DELETE', //método delete
             dataType: 'json', //dados em formato json
             success: ClientesExcluidos, //caso de certo executar tal função
@@ -238,7 +238,7 @@ $( document ).ready(function(){
 
     $(document).on("click", "#link_excluir_funcionarios", function(){
         $.ajax({
-            url: urlweb + '/excluir_todos_funcionarios',//chmando rota
+            url: urlWeb+'/excluir_todos_funcionarios',//chmando rota
             type: 'DELETE', //método delete
             dataType: 'json', //dados em formato json
             success: FuncionariosExcluidos, //caso de certo executar tal função

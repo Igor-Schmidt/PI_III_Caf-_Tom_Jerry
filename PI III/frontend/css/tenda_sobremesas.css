@@ -14,7 +14,7 @@
 	height: 28vw;
 	border-radius: 3vw;
 	border: 0.8vw solid #FFC5C8;
-	background-color: #FFFAED;
+	background-color: white;
 }
 
 .retangulo_destaque img{	
@@ -31,21 +31,22 @@
 }
 
 .retangulos_menores table{
-	width: 30vw;
-	height: 100%;
 	border-collapse: separate; 
     border-spacing: 1vh 1vh;
 }
 
 .retangulos_menores td{
-	border: 0.8vw #FFC5C8 solid;
-	border-radius: 3vw;
+	border: 0.8vw#FFC5C8 solid;
+    border-radius: 3vw;
 	background-color: #FFFAED;
+    width: 9vw;
+    height: 8.5vw;
+    text-align: center;
 }
 
-.botao_voltar{
+.botao_voltar, .botao_adicionar{
 	margin-left: 80%;
-	font-size: 1vw;
+	font-size: 1.25vw;
 	font-weight: bold;
     border-radius: 0.8em;
     box-sizing: border-box;
@@ -54,4 +55,13 @@
     background-color: #FFC5C8;
     margin-top: 1em;
     padding: 0.5em 1em;
+}
+
+.retangulos_menores img{
+	width: 90%;
+}
+
+.retangulos_menores td:hover{
+	background-color: #FFD9DB;
+	border: 0.8vw #FF999F solid;
 }
